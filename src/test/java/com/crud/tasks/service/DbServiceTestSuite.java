@@ -27,7 +27,7 @@ public class DbServiceTestSuite {
         Long id = task.getId();
 
         //Then
-        assertEquals(4, tasks.size());
+        assertEquals(5, tasks.size());
 
         //Cleanup
         dbService.deleteTask(id);
