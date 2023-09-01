@@ -15,14 +15,11 @@ import java.util.List;
 @RequiredArgsConstructor
 @CrossOrigin("*")
 public class TrelloController {
-
     private final TrelloFacade trelloFacade;
-
     @GetMapping("boards")
-    public ResponseEntity<List<TrelloBoardDto>> getTrelloBoards() {
+    public ResponseEntity<List<TrelloBoardDto>> getTrelloBoards(){
         return ResponseEntity.ok(trelloFacade.fetchTrelloBoards());
     }
-
     @PostMapping("cards")
     public ResponseEntity<CreatedTrelloCardDto> createTrelloCard(@RequestBody TrelloCardDto trelloCardDto) {
         return ResponseEntity.ok(trelloFacade.createCard(trelloCardDto));

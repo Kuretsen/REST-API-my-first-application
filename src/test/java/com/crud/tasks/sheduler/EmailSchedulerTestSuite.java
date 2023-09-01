@@ -41,6 +41,6 @@ public class EmailSchedulerTestSuite {
         //Then
         verify(taskRepository, times(1)).count();
         verify(adminConfig, times(1)).getAdminMail();
-        verify(simpleEmailService, times(1)).send(any(Mail.class));
+        verify(simpleEmailService, times(1)).sendSchedule(any(Mail.class));
     }
 }
